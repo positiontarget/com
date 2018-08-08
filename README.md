@@ -1,11 +1,13 @@
 # com
 # git 命令
  
- * 码云、GITHUB 配置公钥：
- ssh-keygen -t rsa -C "xxxxx@xxxxx.com"
+ * 码云、GITHUB 配置公钥：<br/>
  
- * 查看生成的公钥key
- $ cat ~/.ssh/id_rsa.pub
+	ssh-keygen -t rsa -C "xxxxx@xxxxx.com" 
+ 
+ * 查看生成的公钥key<br/>
+  
+	$ cat ~/.ssh/id_rsa.pub
  
  # 我的仓库地址
  https://github.com/positiontarget/com.git<br/>
