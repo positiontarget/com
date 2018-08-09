@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on @click</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="root">
+    <div @click="showClick">{{content}}</div>
+    <!--v-on= 等价于 @click= -->
+    <!--<div v-on="onClick">{{content}}</div>-->
+    <!--<div v-on="onClick">{{template}}</div>-->
+</div>
+
+<script>
+    // <!-- 实例写法 -->
+
+    new Vue({
+        el: "#root",
+        data: {
+            // template："<h1>hello</h1>"  //模板也可以写在这里
+            content: "hello 请点击我！15154"
+        },
+        methods: {
+            showClick: function () {
+                this.content = "world!";
+            }
+        }
+    })
+</script>
+</body>
+</html>
