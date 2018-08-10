@@ -1,0 +1,28 @@
+# Vue 运行环境安装
+
+1.查看是否安装node
+  node -v
+
+2.npm 镜像切换国内的
+  m -v
+  npm install -g cnpm --registry=http://registry.npm.taobao.org
+3.安装vue-cli脚手架构建工具
+   cnpm install -g vue-cli
+
+4. 创建 一个Vue 的项目
+   vue init webpack firstvue  [项目工程不能有大写]
+
+5.打开firstVue文件夹，安装项目所需的依赖
+   cnpm install
+
+  安装完成之后，会在我们的项目目录firstVue文件夹中多出一个node_modules文件夹
+  安装完依赖包之后，就可以运行整个项目了。
+
+6.运行项目
+  npm run dev
+
+7.浏览器会打开localhost:8080 测试访问。
+
+warn : 运行在 IDEA 的项目需先运行如上步骤，才可在ide中打包成功。
+
+https://segmentfault.com/a/1190000009871504
