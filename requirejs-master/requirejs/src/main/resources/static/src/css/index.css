@@ -1,0 +1,10 @@
+@import url(bootstrap/bootstrap.css);
+h1 {
+	color: green;
+}
+
+.user {
+	text-align: left;
+	width: 400px;
+	margin: 20px auto;
+}
