@@ -10,16 +10,40 @@
     <div @click="showClick">{{content}}</div>
     <!--v-on= 等价于 @click= -->
     <!--<div v-on="showClick">{{content}}</div>-->
+    <my-header><my-header-child></my-header-child></my-header>
 </div>
 
 <script>
-    // <!-- 实例写法 -->
+    //
+    <!-- 实例写法 -->
+    // 自定义组件
+    var myHeaderChild = {
+        template: '<p>this child  header</P>'
+    }
+    // 子组件定义
+    var myHeader = {
+        template: '<p><my-header-child></my-header-child>header</P>',
+        commponents: {
+            'my-header-child': myHeaderChild
+        },
+        // 组件里的data都得定义成function 避免引用值
+        data: function () {
+            return {
+                f:1,
+                d:2
+            }
+        }
+    }
 
     new Vue({
         el: "#root",
         data: {
             // template："<h1>hello</h1>"  //模板也可以写在这里
             content: "hello 请点击我！15154"
+        },
+        //引入组件
+        components: {
+            'my-header': myHeader
         },
         methods: {
             showClick: function () {

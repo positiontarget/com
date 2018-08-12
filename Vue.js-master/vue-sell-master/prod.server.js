@@ -40,7 +40,7 @@ apiRoutes.get('/ratings', function (req, res) {
 		errno: 0,
 		data: ratings
 	});
-}); 
+});
 
 app.use('/api', apiRoutes);
 
@@ -53,3 +53,15 @@ module.exports = app.listen(port, function (err) {
 	}
 	console.log('Listening at http://localhost:' + port + '\n')
 });
+
+// var app = require('express')();
+// app.use("*", function (req, res, next) {
+//   res.header('Access-Control-Allow-Origin', '*');
+//   res.header("Access-Control-Allow-Headers", "Content-Type,Content-Length, Authorization, Accept,X-Requested-With");
+//   res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
+//   if (req.method === 'OPTIONS') {
+//     res.send(200)
+//   } else {
+//     next()
+//   }
+// });
